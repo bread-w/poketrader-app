@@ -5,6 +5,8 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 
+app.use(express.static("public"));
+
 /**
  * DEFINE VARIABLES
  */
