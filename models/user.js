@@ -7,8 +7,10 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   User.associate = function (models) {
-    User.hasMany(models.Card, {
-      onDelete: "cascade",
+    User.belongsToMany(models.Card, {
+     through: "user_cards",
+     as: "cards",
+     foreignKey: "user_id",
     });
   };
 
