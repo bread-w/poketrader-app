@@ -4,7 +4,10 @@ const db = require("../models");
 
 // /api/users/
 router.post("/api/users", (req, res) => {
-  db.User.create(req.body)
+  db.User.create({
+    email: req.body.email,
+    password: req.body.password
+  })
     .then((result) => {
       res.json({
         error: false,
