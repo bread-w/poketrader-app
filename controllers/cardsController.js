@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-// /api/alerts/
+
+// This post creates new card inide users collection.
+
 router.post("/", (req, res) => {
   db.Alert.create(req.body)
     .then((result) => {
@@ -22,14 +24,14 @@ router.post("/", (req, res) => {
     });
 });
 
-// /api/alerts/:id
+// /api/cards/:id
 router.put("/:id", (req, res) => {
   res.json({
     message: "Put route",
   });
 });
 
-// /api/alerts/:id
+// /api/cards/:id
 router.delete("/:id", (req, res) => {
   res.json({
     message: "Delete route",

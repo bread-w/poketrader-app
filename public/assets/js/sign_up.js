@@ -20,7 +20,7 @@ $(document).ready(function () {
   });
 
   function signUpUser(email, password) {
-    $.post("/api/signup", {
+    $.post("/api/users", {
       email: email,
       password: password,
     })
