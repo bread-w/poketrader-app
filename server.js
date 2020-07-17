@@ -3,7 +3,11 @@
  * REQUIRE EXTERNAL FILES
  */
 const express = require("express");
+
+
+
 const exphbs = require("express-handlebars");
+
 
 /**
  * DEFINE VARIABLES
@@ -36,6 +40,7 @@ app.use(express.static("public"));
 app.use(ViewsController);
 app.use(APIController);
 app.use("/api/users", UsersController);
+
 
 /**
  * DB Connection

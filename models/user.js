@@ -4,12 +4,13 @@ module.exports = function (sequelize, DataTypes) {
     password: DataTypes.STRING,
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    phoneNumber: DataTypes.STRING,
   });
 
   User.associate = function (models) {
-    User.hasMany(models.Alert, {
-      onDelete: "cascade",
+    User.belongsToMany(models.Card, {
+     through: "user_cards",
+     as: "cards",
+     foreignKey: "user_id",
     });
   };
 
