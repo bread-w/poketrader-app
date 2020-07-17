@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../models");
 
 // /api/users/
-router.post("/", (req, res) => {
+router.post("/api/users", (req, res) => {
   db.User.create(req.body)
     .then((result) => {
       res.json({
