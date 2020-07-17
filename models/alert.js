@@ -5,11 +5,12 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Card.associate = function (models) {
-    Card.hasMany(models.User, {
-      foreignKey: {
-        allowNull: false,
+    Card.belongsToMany(models.User, {
+      through: "user_cards",
+      as: "users",
+      foreignKey: "card_id",
       },
-    });
+    );
   };
   return Card;
 };
