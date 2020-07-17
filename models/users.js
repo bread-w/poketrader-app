@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
   });
-
+  // update to ES6 
   User.associate = function (models) {
     User.belongsToMany(models.Card, {
      through: "user_cards",

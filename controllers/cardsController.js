@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-// /api/cards/
+
+// This post creates new card inide users collection.
+
 router.post("/", (req, res) => {
   db.Alert.create(req.body)
     .then((result) => {
