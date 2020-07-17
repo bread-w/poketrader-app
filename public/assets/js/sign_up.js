@@ -25,9 +25,10 @@ $(document).ready(function () {
       password: password,
     })
       .then(function (data) {
-        window.location.replace("/collection");
+        window.location.replace("/login");
       })
       .catch(function (err) {
+        console.log(err);
         alert("Oops! There's been an error signing you up. Please try again.");
       });
   }
