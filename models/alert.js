@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Card.associate = function (models) {
-    Card.belongsTo(models.User, {
+    Card.hasMany(models.User, {
       foreignKey: {
         allowNull: false,
       },
