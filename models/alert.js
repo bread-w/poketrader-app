@@ -1,18 +1,15 @@
 module.exports = function (sequelize, DataTypes) {
-  const Alert = sequelize.define("Alert", {
-    url: DataTypes.STRING,
-    imageURL: DataTypes.STRING,
-    title: DataTypes.STRING,
-    price: DataTypes.STRING,
-    alerted: DataTypes.BOOLEAN,
+  const Card = sequelize.define("Card", {
+    set_code: DataTypes.STRING,
+    card_code: DataTypes.STRING,
   });
 
-  Alert.associate = function (models) {
-    Alert.belongsTo(models.User, {
+  Card.associate = function (models) {
+    Card.hasMany(models.User, {
       foreignKey: {
         allowNull: false,
       },
     });
   };
-  return Alert;
+  return Card;
 };
