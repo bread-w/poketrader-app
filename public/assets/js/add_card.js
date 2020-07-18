@@ -33,6 +33,7 @@ function searchPokemon(queryURL) {
 
 console.log(pokemonArray);
 
+
 // needed to work with handlebars (but currently not working)
 for (var i = 0; i < pokemonArray.length; i++) {
   pokeObjects[i] = { imageSRC: pokemonArray[i] };
