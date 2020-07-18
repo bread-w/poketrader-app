@@ -39,7 +39,7 @@ app.use(express.static('public'));
 // Routes
 app.use(ViewsController);
 app.use(APIController);
-app.use("/api/users", UsersController);
+app.use("/users", UsersController);
 
 
 /**
