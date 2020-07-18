@@ -20,12 +20,13 @@ $(document).ready(function () {
   });
 
   function signUpUser(email, password) {
-    $.post("/api/users", {
+    $.post("/users", {
       email: email,
       password: password,
     })
       .then(function (data) {
-        window.location.replace("/login");
+        console.log(data)
+        window.location.replace("/");
       })
       .catch(function (err) {
         console.log(err);
