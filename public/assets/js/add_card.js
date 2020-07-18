@@ -1,6 +1,6 @@
 var mainURL = "https://api.pokemontcg.io/v1/cards?name=";
-
 var pokemonArray = [];
+
 
 //listener to movie button
 $("#search-pokemon").on("click", function (event) {
