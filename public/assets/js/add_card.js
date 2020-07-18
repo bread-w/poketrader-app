@@ -1,6 +1,8 @@
 var mainURL = "https://api.pokemontcg.io/v1/cards?name=";
 var pokemonArray = [];
 
+// needed to work with handlebars (but currently not working)
+var pokeObjects = [];
 
 //listener to movie button
 $("#search-pokemon").on("click", function (event) {
@@ -30,3 +32,11 @@ function searchPokemon(queryURL) {
 }
 
 console.log(pokemonArray);
+
+// needed to work with handlebars (but currently not working)
+for (var i = 0; i < pokemonArray.length; i++) {
+  pokeObjects[i] = { imageSRC: pokemonArray[i] };
+}
+
+var display = { pokeObjects: pokeObjects };
+res.render("add_card", display);
