@@ -1,4 +1,5 @@
 var mainURL = "https://api.pokemontcd.io/v1/cards?name=";
+var pokemonArray = [];
 
 //listener to movie button
 $("#search-pokemon").on("click", function (event) {
@@ -21,4 +22,7 @@ function searchPokemon(queryURL) {
   }).then(function (response) {
     console.log(response);
   });
+  // for (var i = 0; i < 20; i++){
+  //   var pokeDisplay = 
+  // }
 }
