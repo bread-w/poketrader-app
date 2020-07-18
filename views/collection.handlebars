@@ -1,5 +1,5 @@
 <div class="row"></div>
-<div class="uk-container">
+<div class="uk-container uk-container-expand">
     <div class="row">
         <div class="col-sm-4">
             {{!-- Spacing/padding --}}
@@ -13,18 +13,13 @@
         </div>
         <div class="col-sm-2">
             {{!-- Filter by button will go here --}}
-            <button>Filter by...</button>
-        </div>
-        <div class="col-sm-1">
-            {{!-- Padding --}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-1">
-            {{!-- Padding --}}
-        </div>
-        <div class="col-sm-10">
-            {{!-- Cards will be generated here --}}
+            <form>
+                <label for="cards">Filter:</label>
+                <select name="filter" id="filter">
+                    <option value="rarity">Rarity</option>
+                    <option value="set">Set</option>
+                </select>
+            </form>
         </div>
         <div class="col-sm-1">
             {{!-- Padding --}}
@@ -48,14 +43,14 @@
     </div>
     <div class="col-sm-2">
         {{!-- Add new card button --}}
-        <button>Add New Card</button>
+        <button class="uk-button uk-button-default uk-button-large">Add New Card</button>
     </div>
     <div class="col-sm-4">
         {{!-- Middle spacing between buttons --}}
     </div>
     <div class="col-sm-2">
         {{!-- Update/remove Card button --}}
-        <button>Update/Remove card</button>
+        <button class="uk-button uk-button-default uk-button-large">Update/Remove Card</button>
     </div>
     <div class="col-sm-2">
         {{!-- Spacing --}}
