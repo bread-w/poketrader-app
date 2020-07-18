@@ -3,11 +3,8 @@ const router = express.Router();
 const db = require("../models");
 
 // /api/users/
-router.post("/api/users", (req, res) => {
-  db.User.create({
-    email: req.body.email,
-    password: req.body.password
-  })
+router.post("/", (req, res) => {
+  db.User.create(req.body)
     .then((result) => {
       res.json({
         error: false,
