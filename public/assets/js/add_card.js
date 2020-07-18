@@ -1,4 +1,4 @@
-var mainURL = "https://api.pokemontcd.io/v1/cards?name=";
+var mainURL = "https://api.pokemontcg.io/v1/cards?name=";
 
 //listener to movie button
 $("#search-pokemon").on("click", function (event) {
