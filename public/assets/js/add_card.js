@@ -3,9 +3,9 @@ var pokemonArray = [];
 
 // needed to work with handlebars (but currently not working)
 
-
 //listener to movie button
 $("#search-pokemon-btn").on("click", function (event) {
+  event.preventDefault();
   console.log("I've been clicked!");
   var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
   var queryURL = `${mainURL}${searchEl}`;
@@ -34,7 +34,6 @@ function searchPokemon(queryURL) {
 console.log(pokemonArray);
 
 // var pokeObjects = [];
-
 
 // needed to work with handlebars (but currently not working)
 // for (var i = 0; i < pokemonArray.length; i++) {
