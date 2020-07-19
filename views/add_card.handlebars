@@ -34,10 +34,15 @@
 <div class="container">
     <row>
         <h1>CARDS WILL GENERATE HERE:</h1>
-        {{!-- {{#each pokeObjects}}
-        <img src="{{imageSRC}}"> // should display all pokemon images
-        {{/each}} --}}
+        <ul>{{#each pokemon}}
+            <li>{{name}}</li>
+            <img src="{{imageUrl}}""></img>
+            
+
+            {{/each}}
+        </ul>
     </row>
 </div>
 <div class="row"></div>
+
 <script type="text/javascript" src="../assets/js/add_card.js"></script>
