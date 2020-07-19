@@ -1,5 +1,4 @@
 const mainUrl = 'https://api.pokemontcg.io/v1/cards?name=';
-
 var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
 const pokemonName = document.querySelector(".pokemon-name")
 
