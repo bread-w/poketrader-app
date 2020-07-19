@@ -17,7 +17,7 @@ const pokemonName = document.querySelector(".pokemon-name")
 // Not working yet. Trying to pull the the value of the ID from the card chosen
 $(document).on("click", ".pokemonCards", function (event) {
   event.preventDefault();
-  var pokemonValue = $(this).siblings("textarea").attr("id");
+  var pokemonValue = $(this).attr("id");
   // const pokemonValue = document.getElementById(this).value;
   console.log(pokemonValue);
 })
