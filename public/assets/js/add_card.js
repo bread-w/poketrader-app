@@ -2,11 +2,11 @@ var mainURL = "https://api.pokemontcg.io/v1/cards?name=";
 var pokemonArray = [];
 
 // needed to work with handlebars (but currently not working)
-var pokeObjects = [];
 
 //listener to movie button
-$("#search-pokemon").on("click", function (event) {
-  // console.log("I've been clicked!");
+$("#search-pokemon-btn").on("click", function (event) {
+  event.preventDefault();
+  console.log("I've been clicked!");
   var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
   var queryURL = `${mainURL}${searchEl}`;
   searchPokemon(queryURL);
@@ -33,11 +33,12 @@ function searchPokemon(queryURL) {
 
 console.log(pokemonArray);
 
+// var pokeObjects = [];
 
 // needed to work with handlebars (but currently not working)
-for (var i = 0; i < pokemonArray.length; i++) {
-  pokeObjects[i] = { imageSRC: pokemonArray[i] };
-}
+// for (var i = 0; i < pokemonArray.length; i++) {
+//   pokeObjects[i] = { imageSRC: pokemonArray[i] };
+// }
 
-var display = { pokeObjects: pokeObjects };
-res.render("add_card", display);
+// var display = { pokeObjects: pokeObjects };
+// res.render("add_card", display);
