@@ -23,6 +23,6 @@ const pokemonName = document.querySelector(".pokemon-name")
    .then(function(response){
      
      console.log(response);
-     window.open("/add-card/" + value);
+     window.location.replace("/add-card/" + value);
    })
  };
