@@ -22,8 +22,6 @@
                                 <li class="uk-nav-header">Header</li>
                                 <li><a href="#">Item</a></li>
                                 <li><a href="#">Item</a></li>
-                                {{!-- <li class="uk-nav-divider"></li>
-                                <li><a href="#">Item</a></li> --}}
                             </ul>
                         </div>
                     </div>
@@ -35,11 +33,11 @@
     <row>
         <h1>CARDS WILL GENERATE HERE:</h1>
         <div class="uk-column-1-6">
-        {{#each pokemon}}
-        {{name}}
-        <img src="{{imageUrl}}"></img>
-        {{/each}}
-    </div>
-<div class="row"></div>
+            {{#each pokemon}}
+            {{name}}
+            <img src="{{imageUrl}}"></img>
+            {{/each}}
+        </div>
+        <div class="row"></div>
 
-<script type="text/javascript" src="../assets/js/add_card.js"></script>
+        <script type="text/javascript" src="../assets/js/add_card.js"></script>
