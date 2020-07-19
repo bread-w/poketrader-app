@@ -1,59 +1,28 @@
 <div class="row"></div>
-<div class="uk-container uk-container-expand">
+<div class="container">
     <div class="row">
-        <div class="uk-column-1-2">
-            {{!-- Spacing/padding --}}
-        </div>
-        <div class="uk-column-1-2">
-            {{!-- User + Collection will go here --}}
-            <h2>Example Collection</h2>
-        </div>
-        <div class="uk-column-1">
-            {{!-- Padding --}}
-        </div>
-        <div class="uk-column-1-2">
-            {{!-- Filter by button will go here --}}
-            <form>
-                <label for="cards">Filter:</label>
-                <select name="filter" id="filter">
-                    <option value="rarity">Rarity</option>
-                    <option value="set">Set</option>
-                </select>
-            </form>
-        </div>
-        <div class="uk-column-1">
-            {{!-- Padding --}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="uk-column-1">
-            {{!-- Padding --}}
-        </div>
-        <div class="uk-column-1-5">
-            {{!-- Cards will be generated here --}}
-        </div>
-        <div class="uk-column-1">
-            {{!-- Padding --}}
-        </div>
+        <h1>Example Collection</h1>
     </div>
 </div>
-<div class="row">
-    <div class="uk-column-1-2">
-        {{!-- Spacing --}}
-    </div>
-    <div class="uk-column-1-2">
-        {{!-- Add new card button --}}
-        <button class="uk-button uk-button-default uk-button-large">Add New Card</button>
-    </div>
-    <div class="uk-column-1-2">
-        {{!-- Middle spacing between buttons --}}
-    </div>
-    <div class="uk-column-1-2">
-        {{!-- Update/remove Card button --}}
-        <button class="uk-button uk-button-default uk-button-large">Update/Remove Card</button>
-    </div>
-    <div class="uk-column-1-2">
-        {{!-- Spacing --}}
+<div class="uk-container">
+    <div class="row">
+        <form class="uk-form">
+            <fieldset data-uk-margin>
+                <div class="search-filter uk-align-right">
+                    <div class="uk-inline">
+                        <button class="uk-button uk-button-primary" type="button">Filter by type:</button>
+                        <div uk-dropdown="pos: bottom-justify">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li class="uk-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
 </div>
-<div class="row"></div>
