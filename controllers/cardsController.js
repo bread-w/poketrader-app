@@ -14,12 +14,12 @@ const db = require("../models");
 // This post creates new card inside users collection.
 
 router.post("/", (req, res) => {
-  db.Alert.create(req.body)
+  db.Card.create(req.body)
     .then((result) => {
       res.json({
         error: false,
         data: result,
-        message: "Successfully created new alert",
+        message: "Successfully created new card",
       });
     })
     .catch((err) => {
@@ -27,7 +27,7 @@ router.post("/", (req, res) => {
       res.status(500).json({
         error: true,
         data: null,
-        message: "Unable to create new alert.",
+        message: "Unable to create new card.",
       });
     });
 });
