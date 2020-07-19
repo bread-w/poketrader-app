@@ -1,9 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+// const axios = require("axios");
 
+// async () => {
+//   console.log(
+//     await axios({
+//       url: "https://api.pokemontcg.io/v1/cards?name=pikachu",
+//     })
+//   );
+// };
 
-// This post creates new card inide users collection.
+// This post creates new card inside users collection.
 
 router.post("/", (req, res) => {
   db.Alert.create(req.body)
