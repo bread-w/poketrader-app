@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+const { default: Axios } = require("axios");
 // const axios = require("axios");
 
 // async () => {
