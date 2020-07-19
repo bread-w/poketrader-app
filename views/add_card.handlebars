@@ -1,35 +1,42 @@
 <div class="row"></div>
 <div class="container">
     <div class="row">
-        <div class="col">
-            <h1>ADD NEW CARD</h1>
-        </div>
+        <h1>Add New Card</h1>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
-            <input type="text" id="search-pokemon">
-            <button id="search-button" for="search-pokemon">Search Pokemon</button>
-        </div>
-        <div class="col-sm-4">
-            <form>
-                <label for="cars">Filter:</label>
-                <select name="filter" id="filter">
-                    <option value="rarity">Rarity</option>
-                </select>
-            </form>
-        </div>
+        <form class="uk-form">
+            <fieldset data-uk-margin>
+                <input type="text" class="uk-form-width-medium uk-form-large search-pokemon" name="search-pokemon"
+                    placeholder="Search for Pokemon">
+                <button class="uk-button uk-button-primary uk-button-large" id="search-pokemon-btn"
+                    for="search-pokemon">Search</button>
+                <div class="search-filter uk-align-right">
+                    <div class="uk-inline">
+                        <button class="uk-button uk-button-primary" type="button">Filter by type:</button>
+                        <div uk-dropdown="pos: bottom-justify">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="uk-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                {{!-- <li class="uk-nav-divider"></li>
+                                <li><a href="#">Item</a></li> --}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </form>
     </div>
 </div>
 <div class="container">
     <row>
-        <div class="pokemon-name">
-            <h1>CARDS WILL GENERATE HERE</h1>
-           {{!--  {{#each pokeObjects}}
-            <img src="{{imageSRC}}"> // should display all pokemon images
-            {{/each}} --}}
-        </div>
+        <h1>CARDS WILL GENERATE HERE:</h1>
+        {{!-- {{#each pokeObjects}}
+        <img src="{{imageSRC}}"> // should display all pokemon images
+        {{/each}} --}}
     </row>
 </div>
 <div class="row"></div>
