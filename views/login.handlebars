@@ -1,4 +1,4 @@
-<div class="uk-container">
+{{!-- <div class="uk-container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <h2>Login</h2>
@@ -16,5 +16,33 @@
             <br />
             <p>Or Sign Up <a href="/sign-up">here</a></p>
         </div>
+    </div>
+</div> --}}
+
+<div class="uk-flex uk-flex-center">
+    <div class="uk-margin-medium-top loginCard">
+        <h2 class="uk-text-center">PokeTrader</h2>
+        <h3 class="uk-text-center">Your Trusted Source for Trading Cards Securely Online</h3>
+
+        <div class="uk-column-1-2">
+            <div>
+                <form id="loginForm">
+                    <label for="username" class="uk-form-label">Username</label>
+                    <input type="text" class="uk-input" id="username">
+                    <label for="password" class="uk-form-label">Password</label>
+                    <input type="password" class="uk-input" id="username">
+
+                </form>
+            </div>
+
+            <div class="uk-text-center">
+
+                <input form="loginForm" type="submit" value="Login"
+                    class="uk-button uk-button-default uk-margin-medium-top"> <br>
+                <a href="/sign-up" class="uk-link ">Sign up now!</a>
+            </div>
+
+        </div>
+
     </div>
 </div>
