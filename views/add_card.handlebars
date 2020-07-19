@@ -9,8 +9,8 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
-            <input type="text" class="search-pokemon" name="search-pokemon">
-            <button id="search-pokemon" for="search-pokemon">Search Pokemon</button>
+            <input type="text" id="search-pokemon">
+            <button id="search-button" for="search-pokemon">Search Pokemon</button>
         </div>
         <div class="col-sm-4">
             <form>
@@ -24,11 +24,11 @@
 </div>
 <div class="container">
     <row>
-        <div class="col">
+        <div class="pokemon-name">
             <h1>CARDS WILL GENERATE HERE</h1>
-            {{#each pokeObjects}}
+           {{!--  {{#each pokeObjects}}
             <img src="{{imageSRC}}"> // should display all pokemon images
-            {{/each}}
+            {{/each}} --}}
         </div>
     </row>
 </div>

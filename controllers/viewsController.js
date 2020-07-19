@@ -1,11 +1,16 @@
 const express = require("express");
 const router = express.Router();
+const axios = require('axios');
 
 router.get("/", (req, res) => {
   res.render("login");
 });
 
-router.get("/add-card", (req, res) => {
+router.get("/add-card", (req, res,) => {
+  res.render("add_card");
+});
+
+router.get("/add-card", (req, res,) => {
   res.render("add_card");
 });
 
