@@ -21,9 +21,7 @@ router.get("/add-card/:name", (req, res,) => {
   });
 });
 
-/* router.get("/add-card/:name", (req, res,) => {
-  res.render("add_card");
-}); */
+
 
 router.get("/collection", (req, res) => {
   res.render("collection");
