@@ -23,6 +23,7 @@ router.post("/", (req, res) => {
     });
 });
 
+// THIS DOESN'T WORK
 router.get("/:id", (req, res) => {
   db.User.findAll({ where: {id: req.params.id}, include: [{model: db.Card, as: "cards"}]}).
   then(results =>{

@@ -14,6 +14,11 @@ const passport = require("./config/passport");
 const PORT = process.env.PORT || 8080;
 const app = express();
 const db = require("./models");
+const ViewsController = require("./controllers/viewsController.js");
+const APIController = require("./controllers/apiController");
+const UsersController = require("./controllers/usersController");
+const CardsController = require("./controllers/cardsController");
+const AuthController = require("./controllers/authController");
 
 /**
  * MIDDLEWARE
@@ -39,13 +44,11 @@ app.use(
   app.use(express.static("public"));
   
   // Routes
-  const ViewsController = require("./controllers/viewsController.js");
-  const APIController = require("./controllers/apiController");
-  const UsersController = require("./controllers/usersController");
-  const CardsController = require("./controllers/cardsController");
+ 
   app.use(ViewsController);
   app.use(APIController);
   app.use("/users", UsersController);
+  app.use("/api/auth", AuthController);
   app.use("/cards", CardsController);
   
 /**
