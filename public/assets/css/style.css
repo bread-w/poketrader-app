@@ -2,8 +2,8 @@ body,
 html {
   font-family: "Press Start 2P", cursive;
   height: 100%;
-  background-size: cover;
   background-image: url("../img/pokeBg.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -30,27 +30,30 @@ h2 {
 h3 {
   font-family: "Press Start 2P", cursive;
 }
-
-#loginPage {
-  background-color: #82e2d3;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.container-inner-border {
+  height: 100%;
+  border: 5px solid yellow;
+  overflow-x: hidden;
+  padding: 25px 25px 40px;
 }
-
-#signUpPage {
-  background-color: #82e2d3;
+.my-container {
+  background-image: url("../img/starburst.jpg");
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  /* background-color: #82e2d3; */
+  border: 10px solid blue;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  
+  /* top: 50%;
+  transform: translateY(-50%); */
 }
 
 .searchFields {
-  background-color: #ff9989;
+  /* background-color: #ff9989; */
   height: 100%;
   padding-top: 20px;
 }
