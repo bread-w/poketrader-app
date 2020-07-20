@@ -30,13 +30,13 @@ h2 {
 h3 {
   font-family: "Press Start 2P", cursive;
 }
-#loginInner {
+.container-inner-border {
   height: 100%;
   padding-bottom: 40px;
   border: 5px solid yellow;
   overflow-x: hidden;
 }
-#loginPage {
+.my-container {
   background-image: url("../img/starburst.jpg");
   /* background-size: cover; */
   background-repeat: no-repeat;
@@ -44,15 +44,6 @@ h3 {
   background-position: center;
   /* background-color: #82e2d3; */
   border: 10px solid blue;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#signUpPage {
-  background-color: #82e2d3;
   margin-left: auto;
   margin-right: auto;
   position: relative;
