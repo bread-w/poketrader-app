@@ -32,24 +32,25 @@ app.set("view engine", "handlebars");
 
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-
-/**
- * VIEW ROUTES
- * API ROUTES
- */
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
-
-// Routes
-app.use(ViewsController);
-app.use(APIController);
-app.use("/users", UsersController);
-app.use("/api/auth", AuthController);
-app.use("/cards", CardsController);
-
+  );
+  app.use(passport.initialize());
+  app.use(passport.session());
+  
+  /**
+   * VIEW ROUTES
+   * API ROUTES
+   */
+  // Serve static content for the app from the "public" directory in the application directory.
+  app.use(express.static("public"));
+  
+  // Routes
+ 
+  app.use(ViewsController);
+  app.use(APIController);
+  app.use("/users", UsersController);
+  app.use("/api/auth", AuthController);
+  app.use("/cards", CardsController);
+  
 /**
  * DB Connection
  * APP LISTEN
