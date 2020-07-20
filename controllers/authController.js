@@ -10,8 +10,6 @@ router.post("/",  passport.authenticate("local"),  function(req, res) {
     }
   })
   .then(function(response){
-    const { id, email, password } = response.dataValues;
-
      let userName = {
       userInfo: response.dataValues,
     }; 
