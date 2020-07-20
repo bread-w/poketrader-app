@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 const mainUrl = 'https://api.pokemontcg.io/v1/cards?name=';
 var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
 const pokemonName = document.querySelector(".pokemon-name")
@@ -17,8 +19,29 @@ const pokemonName = document.querySelector(".pokemon-name")
 $(document).on("click", ".pokemonCards", function (event) {
   event.preventDefault();
   var pokemonValue = $(this).attr("id");
+  var cardData = {
+    card_code: pokemonValue,
+  };
+  // const pokemonValue = document.getElementById(this).value;
   console.log(pokemonValue);
+  console.log(cardData);
+  makeNewCard(cardData.card_code);
+  pokemonValue.val("");
 })
+
+function makeNewCard(card_code) {
+  $.post("/cards", {
+    card_code: card_code,
+  })
+    .then(function (data) {
+      console.log(data)
+      // window.location.replace("/add-card");
+    })
+    // .catch(function (err) {
+    //   console.log(err);
+    //   alert("Oops! There's been an error adding your card. Please try again.");
+    // });
+};
 
 // call function
  function searchPokemon(value){
@@ -31,3 +54,4 @@ $(document).on("click", ".pokemonCards", function (event) {
      window.location.replace("/add-card/" + value);
    })
  };
+});

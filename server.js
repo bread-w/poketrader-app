@@ -18,6 +18,7 @@ const db = require("./models");
 const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");
+const CardsController = require("./controllers/cardsController");
 
 /**
  * MIDDLEWARE
@@ -40,6 +41,7 @@ app.use(express.static('public'));
 app.use(ViewsController);
 app.use(APIController);
 app.use("/users", UsersController);
+app.use("/cards", CardsController);
 
 
 /**
