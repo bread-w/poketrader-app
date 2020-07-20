@@ -1,5 +1,6 @@
-body, html {
-  font-family: 'Press Start 2P', cursive;
+body,
+html {
+  font-family: "Press Start 2P", cursive;
   height: 100%;
   background-size: cover;
   background-image: url("../img/pokeBg.png");
@@ -19,15 +20,15 @@ body, html {
 
 h1 {
   text-align: center;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 h2 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 h3 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 #loginPage {
@@ -36,7 +37,7 @@ h3 {
   margin-right: auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 #signUpPage {
@@ -45,14 +46,26 @@ h3 {
   margin-right: auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 .searchFields {
   background-color: #ff9989;
+  height: 100%;
+  padding-top: 20px;
+}
+
+#addCardFilter {
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
 }
 
 #pokeLogo {
   margin-right: auto;
   margin-left: auto;
+}
+
+.searchedCards {
+  background-color: #ff9989;
 }
