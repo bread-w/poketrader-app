@@ -1,11 +1,23 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
-var passport = require("../config/passport");
+var passport = require("../config/passport.js");
+const { default: Axios } = require("axios");
 
-router.post("/api/login", passport.authenticate("local"), function(req, res) {
-  res.json(req.user);
-});
+router.post("/api/login",  passport.authenticate("local"),  function(req, res) {
+console.log("im here")
+
+  /*  db.User.findOne({
+    email: req.params.email,
+  })
+  .then(function(response){
+    res.json(response);
+  })  */
+   /*  if (req.user){
+     res.redirect("/collection");
+   }  */ 
+
+ });
 // /api/users/
 router.post("/", (req, res) => {
   db.User.create(req.body)
