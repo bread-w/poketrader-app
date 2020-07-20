@@ -1,3 +1,7 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+
 .loginCard {
   max-width: 600px;
 }
@@ -9,11 +13,20 @@
 
 h1 {
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+h3 {
+  font-family: 'Press Start 2P', cursive;
 }
 
 html {
   background-size: cover;
-  background-image: url("pokeBg.png");
+  background-image: url("../img/pokeBg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
