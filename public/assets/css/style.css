@@ -34,8 +34,21 @@ html {
 
 #loginPage {
   background-color: #82e2d3;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#signUpPage {
+  background-color: #82e2d3;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .searchFields {
   background-color: #ff9989;
+}
+
+#pokeLogo {
+  margin-right: auto;
+  margin-left: auto;
 }
