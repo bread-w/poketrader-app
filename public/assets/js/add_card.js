@@ -15,21 +15,31 @@ $(document).ready(function () {
 
   pokeInput.on("click", function (event) {
     var pokemonValue = $(this).attr("id");
+    var pokemonImg = $(this).attr("src");
 
     var cardData = {
       card_code: pokemonValue,
+      card_img: pokemonImg,
     };
-    console.log(pokemonValue);
+    console.log(pokemonImg);
     console.log(cardData);
-    makeNewCard(cardData.card_code);
+    makeNewCard(cardData.card_code, cardData.card_img);
   });
 
-  function makeNewCard(pokemonValue) {
+  $(".big").click(function(){
+    var ids = $(this).children().map(function(){
+      return this.id;
+    }).toArray();
+    console.log(ids);
+  });
+
+  function makeNewCard(pokemonValue, pokemonImg) {
     $.post("/cards", {
       card_code: pokemonValue,
+      card_img: pokemonImg,
     }).then(function (data) {
       console.log(data);
-      window.location.replace("/add-card");
+      /* window.location.replace("/add-card"); */
     });
   }
 
