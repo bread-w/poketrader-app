@@ -18,6 +18,7 @@ const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");
 const CardsController = require("./controllers/cardsController");
+const AuthController = require("./controllers/authController");
 
 /**
  * MIDDLEWARE
@@ -46,6 +47,7 @@ app.use(express.static("public"));
 app.use(ViewsController);
 app.use(APIController);
 app.use("/users", UsersController);
+app.use("/api/auth", AuthController);
 app.use("/cards", CardsController);
 
 /**
@@ -53,7 +55,7 @@ app.use("/cards", CardsController);
  * APP LISTEN
  */
 db.sequelize
-  .sync({ force: true })
+  .sync(/* { force: false } */)
   //   .sync()
   .then(() => {
     // Start our server so that it can begin listening to client requests.
