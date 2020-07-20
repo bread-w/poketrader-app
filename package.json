@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanjwatson/mvc-starter.git"
+    "url": "git+https://github.com/bread-w/poketrader-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jonathanjwatson/mvc-starter/issues"
+    "url": "https://github.com/bread-w/poketrader-app/issues"
   },
-  "homepage": "https://github.com/jonathanjwatson/mvc-starter#readme",
+  "homepage": "https://github.com/bread-w/poketrader-app#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
