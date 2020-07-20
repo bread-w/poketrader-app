@@ -46,6 +46,7 @@ app.use(express.static("public"));
 app.use(ViewsController);
 app.use(APIController);
 app.use("/users", UsersController);
+app.use("/api/login", UsersController);
 app.use("/cards", CardsController);
 
 /**
@@ -53,7 +54,7 @@ app.use("/cards", CardsController);
  * APP LISTEN
  */
 db.sequelize
-  .sync({ force: true })
+  .sync(/* { force: false } */)
   //   .sync()
   .then(() => {
     // Start our server so that it can begin listening to client requests.
