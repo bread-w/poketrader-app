@@ -32,9 +32,9 @@ h3 {
 }
 .container-inner-border {
   height: 100%;
-  padding-bottom: 40px;
   border: 5px solid yellow;
   overflow-x: hidden;
+  padding: 25px 25px 40px;
 }
 .my-container {
   background-image: url("../img/starburst.jpg");
@@ -47,12 +47,13 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  
+  /* top: 50%;
+  transform: translateY(-50%); */
 }
 
 .searchFields {
-  background-color: #ff9989;
+  /* background-color: #ff9989; */
   height: 100%;
   padding-top: 20px;
 }
