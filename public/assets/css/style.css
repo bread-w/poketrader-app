@@ -2,6 +2,10 @@
   max-width: 600px;
 }
 
+.pokemonCards {
+    margin-top: 5px;
+}
+
 h1 {
   text-align: center;
 }
