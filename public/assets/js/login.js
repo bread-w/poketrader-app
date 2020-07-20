@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var loginForm = $("form.login");
+  var loginForm = $("input#login-btn");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
@@ -25,7 +25,8 @@ $(document).ready(function () {
       password: password,
     })
       .then(function () {
-        /* window.location.replace("/collection"); */
+        console.log("Login Response");
+        // window.location.replace("/collection");
       })
       .catch(function (err) {
         console.log(err);
