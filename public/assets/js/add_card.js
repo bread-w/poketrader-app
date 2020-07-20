@@ -1,57 +1,45 @@
 $(document).ready(function () {
-
-const mainUrl = 'https://api.pokemontcg.io/v1/cards?name=';
-var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
-const pokemonName = document.querySelector(".pokemon-name")
-
-
-
-//listener to movie button
- $("#search-pokemon-btn").on("click", function (event) {
-  event.preventDefault();
+  const mainUrl = "https://api.pokemontcg.io/v1/cards?name=";
   var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
+  var pokeInput = $("button.pokemonCards");
 
-  console.log("I've been clicked!");
+  //listener to movie button
+  $("#search-pokemon-btn").on("click", function (event) {
+    event.preventDefault();
+    var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
 
-  searchPokemon(searchEl);
-}); 
+    console.log("I've been clicked!");
 
-$(document).on("click", ".pokemonCards", function (event) {
-  event.preventDefault();
-  var pokemonValue = $(this).attr("id");
-  var cardData = {
-    card_code: pokemonValue,
-  };
-  // const pokemonValue = document.getElementById(this).value;
-  console.log(pokemonValue);
-  console.log(cardData);
-  makeNewCard(cardData.card_code);
-  pokemonValue.val("");
-})
+    searchPokemon(searchEl);
+  });
 
-function makeNewCard(card_code) {
-  $.post("/cards", {
-    card_code: card_code,
-  })
-    .then(function (data) {
-      console.log(data)
-      // window.location.replace("/add-card");
-    })
-    // .catch(function (err) {
-    //   console.log(err);
-    //   alert("Oops! There's been an error adding your card. Please try again.");
-    // });
-};
+  pokeInput.on("click", function (event) {
+    var pokemonValue = $(this).attr("id");
 
-// call function
- function searchPokemon(value){
-   $.get("add-card",{
-     name: value,
-   })
-   .then(function(response){
-     
-     console.log(response);
-     window.location.replace("/add-card/" + value);
-   })
- };
+    var cardData = {
+      card_code: pokemonValue,
+    };
+    console.log(pokemonValue);
+    console.log(cardData);
+    makeNewCard(cardData.card_code);
+  });
+
+  function makeNewCard(pokemonValue) {
+    $.post("/cards", {
+      card_code: pokemonValue,
+    }).then(function (data) {
+      console.log(data);
+      window.location.replace("/add-card");
+    });
+  }
+
+  // call function
+  function searchPokemon(value) {
+    $.get("add-card", {
+      name: value,
+    }).then(function (response) {
+      console.log(response);
+      window.location.replace("/add-card/" + value);
+    });
+  }
 });
