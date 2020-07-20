@@ -3,9 +3,26 @@
 }
 
 .pokemonCards {
-    margin-top: 5px;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 h1 {
   text-align: center;
+}
+
+html {
+  background-size: cover;
+  background-image: url("pokeBg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#loginPage {
+  background-color: #82e2d3;
+}
+
+.searchFields {
+  background-color: #ff9989;
 }
