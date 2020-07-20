@@ -8,10 +8,11 @@ $(document).ready(function () {
   signUpForm.on("submit", function (event) {
     event.preventDefault();
     var userData = {
-      email: emailInput.val().trim(),
-      password: passwordInput.val().trim(),
       firstName: firstInput.val().trim(),
       lastName: lastInput.val().trim(),
+      email: emailInput.val().trim(),
+      password: passwordInput.val().trim(),
+     
     };
 
     if (!userData.email || !userData.password) {
@@ -19,10 +20,11 @@ $(document).ready(function () {
     }
 
     signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
-    emailInput.val("");
-    passwordInput.val("");
     firstInput.val("");
     lastInput.val("");
+    emailInput.val("");
+    passwordInput.val("");
+    
   });
 
   function signUpUser(email, password, firstName, lastName) {
