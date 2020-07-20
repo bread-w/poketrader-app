@@ -55,7 +55,7 @@ app.use("/cards", CardsController);
  * APP LISTEN
  */
 db.sequelize
-  .sync(/* { force: false } */)
+  .sync(/* { force: true } */)
   //   .sync()
   .then(() => {
     // Start our server so that it can begin listening to client requests.

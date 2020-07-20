@@ -4,17 +4,14 @@ const axios = require("axios");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 router.get("/", (req, res) => {
-  if (req.user){
+  if (req.user) {
     res.redirect("/collection");
+    return;
   }
   res.render("login");
 });
 
-router.get("/login", (req, res) => {
-});
-
-
-
+router.get("/login", (req, res) => {});
 
 router.get("/add-card", (req, res) => {
   res.render("add_card");
@@ -33,7 +30,8 @@ router.get("/add-card/:name", (req, res) => {
 });
 
 router.get("/collection/", (req, res) => {
-  res.render("collection");
+  console.log(req.user);
+  res.render("collection", { userInfo: req.user });
 });
 
 router.get("/sign-up", (req, res) => {

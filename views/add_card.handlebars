@@ -14,7 +14,8 @@
                     for="search-pokemon">Search</button>
                 <div class="search-filter uk-align-right">
                     <div class="uk-inline">
-                        <button class="uk-button uk-button-primary" type="button" id="addCardFilter">Filter by type:</button>
+                        <button class="uk-button uk-button-primary" type="button" id="addCardFilter">Filter by
+                            type:</button>
                         <div uk-dropdown="pos: bottom-justify">
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-nav-header">Rarity</li>
@@ -31,12 +32,14 @@
     </div>
 </div>
 <div class="uk-container">
-        <div class="uk-column-1-6@s searchedCards">
-            {{#each pokemon}}
-            <button class="pokemonCards" id="{{id}}" src="{{imageUrl}}" >
-                <img src="{{imageUrl}}"></img>
-            </button>
-            {{/each}}
-        </div>
+    <div class="uk-column-1-6@s searchedCards">
+        {{#each pokemon}}
+        <button class="pokemonCards" id="{{id}}" src="{{imageUrl}}">
+            <img src="{{imageUrl}}"></img>
+        </button>
+        {{/each}}
+    </div>
 </div>
+<br>
+<a href="/collection" class="uk-button uk-button-primary uk-button-large">View my Collection</a>
 <script type="text/javascript" src="../assets/js/add_card.js"></script>
