@@ -6,17 +6,18 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 router.get("/", (req, res) => {
   if (req.user) {
     res.redirect("/collection");
+    return;
   }
   res.render("login");
 });
 
 router.get("/login", (req, res) => {});
 
-router.get("/add_card", (req, res) => {
+router.get("/add-card", (req, res) => {
   res.render("add_card");
 });
 
-router.get("/add_card/:name", (req, res) => {
+router.get("/add-card/:name", (req, res) => {
   axios
     .get("https://api.pokemontcg.io/v1/cards?name=" + req.params.name)
     .then(function (response) {
@@ -28,8 +29,9 @@ router.get("/add_card/:name", (req, res) => {
     });
 });
 
-router.get("/collection", (req, res) => {
-  res.render("collection");
+router.get("/collection/", (req, res) => {
+  console.log(req.user);
+  res.render("collection", { userInfo: req.user });
 });
 
 router.get("/sign-up", (req, res) => {
