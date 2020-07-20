@@ -1,7 +1,6 @@
 body,
 html {
   font-family: "Press Start 2P", cursive;
-  height: 100%;
   background-image: url("../img/pokeBg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,18 +37,12 @@ h3 {
 }
 .my-container {
   background-image: url("../img/starburst.jpg");
-  /* background-size: cover; */
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-position: center;
-  /* background-color: #82e2d3; */
   border: 10px solid blue;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  
-  /* top: 50%;
-  transform: translateY(-50%); */
 }
 
 .add_card {
