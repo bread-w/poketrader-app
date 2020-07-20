@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "8912",
-    "database": "pokemon_db",
+    "password": "D2963hugg",    
+
+    
+    "database": "test_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
