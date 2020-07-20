@@ -53,7 +53,7 @@ app.use(
  * APP LISTEN
  */
 db.sequelize
-  .sync({ force: true })
+  .sync(/* { force: false } */)
   //   .sync()
   .then(() => {
     // Start our server so that it can begin listening to client requests.
