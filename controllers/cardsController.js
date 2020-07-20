@@ -15,6 +15,8 @@ const { default: Axios } = require("axios");
 // This post creates new card inside users collection.
 
 router.post("/", (req, res) => {
+  // console.log(req.user);
+  // req.body.user_id = req.user.id;
   db.Card.create(req.body)
     .then((result) => {
       res.json({
