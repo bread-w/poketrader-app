@@ -13,11 +13,11 @@ router.get("/", (req, res) => {
 
 router.get("/login", (req, res) => {});
 
-router.get("/add_card", (req, res) => {
+router.get("/add-card", (req, res) => {
   res.render("add_card");
 });
 
-router.get("/add_card/:name", (req, res) => {
+router.get("/add-card/:name", (req, res) => {
   axios
     .get("https://api.pokemontcg.io/v1/cards?name=" + req.params.name)
     .then(function (response) {
