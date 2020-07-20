@@ -25,7 +25,7 @@ $(document).ready(function () {
       password: password,
     })
       .then(function () {
-        window.location.replace("/collection");
+        /* window.location.replace("/collection"); */
       })
       .catch(function (err) {
         console.log(err);
