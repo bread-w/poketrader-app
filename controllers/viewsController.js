@@ -28,7 +28,7 @@ router.get("/add_card/:name", (req, res) => {
     });
 });
 
-router.get("/collection/", (req, res) => {
+router.get("/collection", (req, res) => {
   res.render("collection");
 });
 
