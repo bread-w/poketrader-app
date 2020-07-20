@@ -3,6 +3,9 @@
     "username": "root",
     "password": "D2963hugg",    
 
+=======
+    "password": "TheLaughTrack123!!",
+    
     "database": "test_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
