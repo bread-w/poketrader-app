@@ -1,23 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
-var passport = require("../config/passport.js");
-const { default: Axios } = require("axios");
 
-router.post("/api/login",  passport.authenticate("local"),  function(req, res) {
-console.log("im here")
-
-  /*  db.User.findOne({
-    email: req.params.email,
-  })
-  .then(function(response){
-    res.json(response);
-  })  */
-   /*  if (req.user){
-     res.redirect("/collection");
-   }  */ 
-
- });
 // /api/users/
 router.post("/", (req, res) => {
   db.User.create(req.body)
@@ -27,6 +11,7 @@ router.post("/", (req, res) => {
         data: result,
         message: "Successfully created new user",
       });
+      req.redirect("/collection")
     })
     .catch((err) => {
       console.log(err);
