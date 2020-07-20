@@ -1,5 +1,11 @@
-body {
+body, html {
   font-family: 'Press Start 2P', cursive;
+  height: 100%;
+  background-size: cover;
+  background-image: url("../img/pokeBg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .loginCard {
@@ -24,24 +30,22 @@ h3 {
   font-family: 'Press Start 2P', cursive;
 }
 
-html {
-  background-size: cover;
-  background-image: url("../img/pokeBg.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-
 #loginPage {
   background-color: #82e2d3;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 #signUpPage {
   background-color: #82e2d3;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 .searchFields {
