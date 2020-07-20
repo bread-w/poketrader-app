@@ -7,6 +7,8 @@ router.get("/", (req, res) => {
   res.render("login");
 });
 
+
+
 router.get("/add-card", (req, res) => {
   res.render("add_card");
 });

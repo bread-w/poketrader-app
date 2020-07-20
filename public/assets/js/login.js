@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var loginForm = $("input#login-btn");
+  var loginForm = $("form.login");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
@@ -20,13 +20,13 @@ $(document).ready(function () {
   });
 
   function loginUser(email, password) {
-    $.post("api/login", {
+    $.post("/api/login", {
       email: email,
       password: password,
     })
       .then(function () {
         console.log("Login Response");
-        // window.location.replace("/collection");
+        window.location.replace("/collection");
       })
       .catch(function (err) {
         console.log(err);
