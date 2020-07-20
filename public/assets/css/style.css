@@ -52,6 +52,10 @@ h3 {
   transform: translateY(-50%); */
 }
 
+.add_card {
+  min-height: 400px;
+}
+
 .searchFields {
   /* background-color: #ff9989; */
   height: 100%;
