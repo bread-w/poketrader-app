@@ -7,12 +7,12 @@
 <div class="uk-container">
     <div class="row">
         <form class="uk-form">
-            <fieldset data-uk-margin>
+            <fieldset data-uk-margin class="searchFields">
                 <input type="text" class="uk-form-width-medium uk-form-large search-pokemon" name="search-pokemon"
                     placeholder="Search for Pokemon">
                 <button class="uk-button uk-button-primary uk-button-large" id="search-pokemon-btn"
                     for="search-pokemon">Search</button>
-                <div class="search-filter uk-align-right">
+                {{!-- <div class="search-filter uk-align-right">
                     <div class="uk-inline">
                         <button class="uk-button uk-button-primary" type="button">Filter by type:</button>
                         <div uk-dropdown="pos: bottom-justify">
@@ -25,7 +25,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </fieldset>
         </form>
     </div>
