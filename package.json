@@ -10,20 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanjwatson/mvc-starter.git"
+    "url": "git+https://github.com/bread-w/poketrader-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jonathanjwatson/mvc-starter/issues"
+    "url": "https://github.com/bread-w/poketrader-app/issues"
   },
-  "homepage": "https://github.com/jonathanjwatson/mvc-starter#readme",
+  "homepage": "https://github.com/bread-w/poketrader-app#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "express-handlebars": "^3.0.0",
     "mysql2": "^2.1.0",
-    "sequelize": "^6.3.3"
+    "sequelize": "^6.3.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "bcryptjs": "2.4.3",
+    "express-session": "^1.16.1"
   }
 }
