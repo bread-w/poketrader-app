@@ -1,3 +1,6 @@
+<div class="uk-container">
+    <a href="/logout" class="uk-button uk-button-primary uk-button-large uk-align-right">Logout</a>
+</div>
 <div class="uk-container" id="collectionPage">
     <div class="my-container uk-margin-large-top ">
         <div class="container-inner-border add_card">
@@ -26,13 +29,13 @@
                 </fieldset>
             </div>
             <div class="row">
-            <div class="uk-column-1-6">
-                {{#each pokemon}}
-                <button class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
-                    <img src="{{this.card_img}}"></img>
-                </button>
-                {{/each}}
-            </div>
+                <div class="uk-column-1-6">
+                    {{#each pokemon}}
+                    <button class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
+                        <img src="{{this.card_img}}"></img>
+                    </button>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </div>
@@ -40,6 +43,5 @@
 <div class="uk-container uk-align-center">
     <a href="/add-card" class="uk-button uk-button-primary uk-button-large uk-align-left">Add New Card</a>
     <a href="/update" class="uk-button uk-button-primary uk-button-large uk-align-right">Update my Collection</a>
-    <a href="/logout" class="uk-button uk-button-primary uk-button-large uk-align-right">Logout</a>
 </div>
 <script type="text/javascript" src="../assets/js/collection.js"></script>
