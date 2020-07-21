@@ -24,30 +24,13 @@ router.post("/", (req, res) => {
 });
 
 // THIS DOESN'T WORK
-router.get("/:id", (req, res) => {
-  db.User.findAll({ where: {id: req.params.id}, include: [{model: db.Card, as: "cards"}]}).
-  then(results =>{
-    console.log(results);
-    res.json(results);
-  })
-  // db.User.findAll({
-  //   where: {
-  //     id: req.params.id,
-  //   },
-  //   include: [{
-  //     model: db.Card,
-  //     through: {
-  //       where: {
-  //         user_id: req.params.id,
-  //       },
-  //   }}],
-  //   raw: true,
-  // })
-  // .then(results =>{
-  //   console.log(results);
-  //   res.json(results);
-  // })
-});
+// router.get("/:id", (req, res) => {
+//   db.User.findAll({ where: {id: req.params.id}, include: [{model: db.Card, as: "cards"}]}).
+//   then(results =>{
+//     console.log(results);
+//     res.json(results);
+//   })
+// });
 
 // /api/users/:id
 router.put("/:id", (req, res) => {

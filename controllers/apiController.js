@@ -9,7 +9,6 @@ router.get("/api/config", (req, res) => {
 });
 
 router.delete("/api/usercards/:id", function (req, res) {
-  // We just have to specify which todo we want to destroy with "where"
   db.UserCard.destroy({
     where: {
       id: req.params.id,
