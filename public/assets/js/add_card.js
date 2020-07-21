@@ -26,13 +26,6 @@ $(document).ready(function () {
     makeNewCard(cardData.card_code, cardData.card_img);
   });
 
-  $(".big").click(function(){
-    var ids = $(this).children().map(function(){
-      return this.id;
-    }).toArray();
-    console.log(ids);
-  });
-
   function makeNewCard(pokemonValue, pokemonImg) {
     $.post("/cards", {
       card_code: pokemonValue,

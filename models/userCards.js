@@ -5,5 +5,12 @@ module.exports = function (sequelize, DataTypes) {
   });
   // update to ES6
 
+
+
+  // UserCard.associate = function (models) {
+  //   UserCard.belongsTo(models.User);
+  // };
+
+
   return UserCard;
 };
