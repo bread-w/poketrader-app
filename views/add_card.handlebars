@@ -23,12 +23,16 @@
                                 <button class="uk-button uk-button-primary" type="button" id="addCardFilter">Filter by
                                     type:</button>
                                 <div uk-dropdown="pos: bottom-justify">
+                                   
                                     <ul class="uk-nav uk-dropdown-nav">
                                         <li class="uk-nav-header">Rarity</li>
+                                       
                                         <li><a href="common">Common</a></li>
+                                        
                                         <li><a href="uncommon">Uncommon</a></li>
                                         <li><a href="rare">Rare</a></li>
                                         <li><a href="special">Special</a></li>
+                                      
                                     </ul>
                                 </div>
                             </div>
@@ -39,7 +43,7 @@
             <div class="row">
                 <div class="uk-column-1-6">
                     {{#each pokemon}}
-                    <button class="pokemonCards" id="{{id}}" src="{{imageUrl}}">
+                    <button class="pokemonCards {{rarity}}" id="{{id}}" src="{{imageUrl}}">
                         <img src="{{imageUrl}}"></img>
                     </button>
                     {{/each}}
