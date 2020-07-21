@@ -11,5 +11,15 @@ function deleteCard(event) {
   }).then(function (response) {
     console.log(response);
     window.location.replace("/update");
+    deletedCard();
   });
+}
+
+function deletedCard() {
+  $("#alert").attr("style", "display: inline-block");
+  setTimeout(hideCard, 1500);
+}
+
+function hideCard() {
+  $("#alert").attr("style", "display: none");
 }
