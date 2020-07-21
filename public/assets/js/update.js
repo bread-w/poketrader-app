@@ -23,5 +23,4 @@ function deletedCard() {
 
 function hideCard() {
   window.location.replace("/update");
-  $("#alert").attr("style", "display: none");
 }
