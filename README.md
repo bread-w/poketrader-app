@@ -26,7 +26,7 @@ The primary usage of this code is to build a digital collection of Pokemon cards
 ## Links
 [GitHub repository](https://github.com/bread-w/poketrader-app "Repository")
 
-[Heroku Server](https://bref-croissant-30259.herokuapp.com/ "Heroku")
+[Heroku Server](https://gt-poketrader.herokuapp.com/ "Heroku")
 
 
 ## License
@@ -54,7 +54,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Contributions
-If you wish to contribute to this project, feel welcomed to contact me.
+If you wish to contribute to this project, feel welcomed to contact our team.
 
 ## Questions
-If you have any comments, concerns, or questions about this command line application, feel welcomed to send an email at: cheacliatt@gmail.com
+If you have any comments, concerns, or questions about this application, feel free to reach out to any of our contributors.
