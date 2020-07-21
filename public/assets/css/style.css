@@ -36,6 +36,10 @@ p {
   color: black;
 }
 
+.alertText {
+  color: yellow;
+}
+
 .uk-link {
   color: yellow;
 }
