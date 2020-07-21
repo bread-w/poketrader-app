@@ -24,6 +24,7 @@ $(document).ready(function () {
     console.log(pokemonImg);
     console.log(cardData);
     makeNewCard(cardData.card_code, cardData.card_img);
+    addedCard();
   });
 
   function makeNewCard(pokemonValue, pokemonImg) {
@@ -46,3 +47,12 @@ $(document).ready(function () {
     });
   }
 });
+
+function addedCard() {
+  $("#alert").attr("style", "display: inline-block");
+  setTimeout(hideCard, 1500);
+}
+
+function hideCard() {
+  $("#alert").attr("style", "display: none");
+}
