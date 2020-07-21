@@ -7,6 +7,10 @@ const axios = require("axios");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const passport = require("./config/passport");
+const handlebars = require("handlebars");
+const {
+  allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
 
 /**
  * DEFINE VARIABLES
@@ -20,6 +24,15 @@ const UsersController = require("./controllers/usersController");
 const CardsController = require("./controllers/cardsController");
 const AuthController = require("./controllers/authController");
 
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(handlebars),
+  })
+);
+app.set("view engine", "handlebars");
+
 /**
  * MIDDLEWARE
  */
@@ -27,30 +40,28 @@ const AuthController = require("./controllers/authController");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Handlebars setup
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-  );
-  app.use(passport.initialize());
-  app.use(passport.session());
-  
-  /**
-   * VIEW ROUTES
-   * API ROUTES
-   */
-  // Serve static content for the app from the "public" directory in the application directory.
-  app.use(express.static("public"));
-  
-  // Routes
- 
-  app.use(ViewsController);
-  app.use(APIController);
-  app.use("/users", UsersController);
-  app.use("/api/auth", AuthController);
-  app.use("/cards", CardsController);
-  
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+/**
+ * VIEW ROUTES
+ * API ROUTES
+ */
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
+// Routes
+
+app.use(ViewsController);
+app.use(APIController);
+app.use("/users", UsersController);
+app.use("/api/auth", AuthController);
+app.use("/cards", CardsController);
+
 /**
  * DB Connection
  * APP LISTEN
