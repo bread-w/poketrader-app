@@ -43,11 +43,23 @@ router.get("/api/usercards", function (req, res) {
     res.status(500).json({
       error: true,
       data: null,
-      message: "god fucking dammit",
+      message: "error",
     });
   });
 });
 
+
+// router.get("/collection/", (req, res) => {
+//   console.log(req.user);
+//   Card.findAll({
+//     where: {
+//       user_id: req.user.id,
+//     },
+//   }).then((cards) => {
+//     console.log(cards);
+//   });
+//   res.render("collection", { userInfo: req.user });
+// });
 
 router.get("/collection/", (req, res) => {
   console.log(req.user);

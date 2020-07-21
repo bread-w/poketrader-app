@@ -15,8 +15,8 @@ const { default: Axios } = require("axios");
 // This post creates new card inside users collection.
 
 router.post("/", (req, res) => {
-  console.log(req.body);
-  console.log(req.user);
+  // console.log(req.body);
+  // console.log(req.user);
   const cardPayload = {
     card_code: req.body.card_code,
     card_img: req.body.card_img,
@@ -26,6 +26,7 @@ router.post("/", (req, res) => {
       const userCardPayload = {
         user_id: req.user.id,
         card_id: req.body.card_code,
+        card_img: req.body.card_img,
       };
       return db.UserCard.create(userCardPayload).then((userCardResult) => {
         console.log(userCardResult);
