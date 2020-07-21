@@ -30,13 +30,9 @@ module.exports = function (sequelize, DataTypes) {
       null
     );
   });
-  // update to ES6
+  // // update to ES6
   // User.associate = function (models) {
-  //   User.belongsToMany(models.Card, {
-  //     through: "user_cards",
-  //     as: "cards",
-  //     foreignKey: "user_id",
-  //   });
+  //   User.hasMany(models.UserCard);
   // };
 
   return User;
