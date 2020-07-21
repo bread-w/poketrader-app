@@ -66,10 +66,6 @@ router.get("/sign-up", (req, res) => {
   res.render("sign_up");
 });
 
-// router.get("/update", (req, res) => {
-//   res.render("update");
-// });
-
 router.get("/update/", (req, res) => {
   console.log(req.user);
   db.UserCard.findAll({
@@ -81,29 +77,5 @@ router.get("/update/", (req, res) => {
     res.render("update", { userInfo: req.user, pokemon: cards });
   });
 });
-
-// router.get("/api/usercards", function (req, res) {
-//   var query = {};
-//   if (req.query.user_id) {
-//     query.UserId = req.query.user_id;
-//   }
-//   db.UserCard.findAll({
-//     where: query,
-//     include: [db.User],
-//   }).then(function (dbPost) {
-//     res.json(dbPost);
-//   });
-// });
-
-// db.UserCard.findAll({
-//   where: {
-//     user_id: 3,
-//   },
-// }).then(function(response) {
-//   console.log(response);
-// });
-
-// const something = db.UserCard.findAll({ include: db.User });
-// console.log(JSON.stringify(something, null, 2));
 
 module.exports = router;

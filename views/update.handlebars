@@ -6,6 +6,11 @@
         <div class="container-inner-border add_card">
             <div class="row">
                 <h1>Update my Collection</h1>
+                <h3 id="deleteCard">Click on a Card to Delete it</h3>
+            </div>
+            <div class="uk-alert-success" id="alert" uk-alert>
+                <a class="uk-alert-close" uk-close></a>
+                <p class="alertText">Card Deleted!</p>
             </div>
             <div class="row">
                 <fieldset class="searchFields">
@@ -31,7 +36,7 @@
             <div class="row">
                 <div class="uk-column-1-6">
                     {{#each pokemon}}
-                    <button class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
+                    <button class="pokemonCards delete" data-id="{{this.id}}" src="{{this.card_img}}">
                         <img src="{{this.card_img}}"></img>
                     </button>
                     {{/each}}
