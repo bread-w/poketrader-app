@@ -18,7 +18,7 @@ router.get("/add-card", (req, res) => {
   res.render("add_card");
 });
 
-/* router.get("/add-card/:name", (req, res) => {
+router.get("/add-card/:name", (req, res) => {
   axios
     .get("https://api.pokemontcg.io/v1/cards?name=" + req.params.name)
     .then(function (response) {
@@ -28,19 +28,7 @@ router.get("/add-card", (req, res) => {
       console.log(pokeObject);
       res.render("add_card", pokeObject);
     });
-}); */
-router.get("/add-card/:name", (req, res) => {
-  axios
-    .get("https://api.pokemontcg.io/v1/cards?name=" + req.params.name + "&rarity=" + req.params.rarity)
-    .then(function (response) {
-      let pokeObject = {
-        pokemon: response.data.cards,
-      };
-      console.log(pokeObject);
-      res.render("add_card", pokeObject);
-    });
 });
-/* https://api.pokemontcg.io/v1/cards?name=blastoise&rarity=uncommon */
 
 router.get("/api/usercards", function (req, res) {
   db.UserCard.findAll({})
@@ -57,13 +45,10 @@ router.get("/api/usercards", function (req, res) {
     });
 });
 
-
-
-router.get("/logout", function(req, res) {
+router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/");
 });
-
 
 router.get("/collection/", (req, res) => {
   console.log(req.user);
