@@ -31,19 +31,21 @@ router.get("/add-card/:name", (req, res) => {
 });
 
 router.get("/api/usercards", function (req, res) {
-  db.UserCard.findAll({}).then(function(response){
-    console.log(response);
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json({
-      error: true,
-      data: null,
-      message: "error",
+  db.UserCard.findAll({})
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "error",
+      });
     });
-  });
 });
 
-router.get("/logout", function(req, res) {
+router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/");
 });
