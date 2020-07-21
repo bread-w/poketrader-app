@@ -49,6 +49,13 @@ router.get("/api/usercards", function (req, res) {
 });
 
 
+
+router.get("/logout", function(req, res) {
+  req.logout();
+  res.redirect("/");
+});
+
+
 router.get("/collection/", (req, res) => {
   console.log(req.user);
   db.UserCard.findAll({
