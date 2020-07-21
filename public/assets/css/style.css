@@ -14,7 +14,7 @@ html {
 .pokemonCards {
   margin-top: 5px;
   background-color: rgba(255, 255, 255, 0);
-  transition: transform .2s; 
+  transition: transform 0.2s;
 }
 .pokemonCards:hover {
   transform: scale(1.5);
@@ -59,6 +59,13 @@ p {
 }
 
 #deleteCard {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  color: yellow;
+  -webkit-text-stroke: 1px black;
+}
+
+#favoriteCard {
   font-family: "Press Start 2P", cursive;
   text-align: center;
   color: yellow;
