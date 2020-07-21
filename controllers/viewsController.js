@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+const Card = require("../models/cards");
 
 router.get("/", (req, res) => {
   if (req.user) {
@@ -31,6 +32,13 @@ router.get("/add-card/:name", (req, res) => {
 
 router.get("/collection/", (req, res) => {
   console.log(req.user);
+  Card.findAll({
+    where: {
+      user_id: req.user.id,
+    },
+  }).then((cards) => {
+    console.log(cards);
+  });
   res.render("collection", { userInfo: req.user });
 });
 

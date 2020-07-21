@@ -27,6 +27,12 @@ h2 {
 h3 {
   font-family: "Press Start 2P", cursive;
 }
+
+::placeholder {
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+}
+
 .container-inner-border {
   height: 100%;
   border: 5px solid yellow;
@@ -75,4 +81,3 @@ h3 {
   margin-right: auto;
   margin-left: auto;
 }
-
