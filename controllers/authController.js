@@ -19,5 +19,4 @@ router.post("/",  passport.authenticate("local"),  function(req, res) {
 
 });
 
-
 module.exports = router;

@@ -30,10 +30,6 @@ module.exports = function (sequelize, DataTypes) {
       null
     );
   });
-  // // update to ES6
-  // User.associate = function (models) {
-  //   User.hasMany(models.UserCard);
-  // };
 
   return User;
 };
