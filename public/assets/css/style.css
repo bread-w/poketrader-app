@@ -15,7 +15,6 @@ html {
   margin-top: 5px;
   background-color: rgba(255, 255, 255, 0);
   transition: transform .2s; 
-  display: block;
 }
 .pokemonCards:hover {
   transform: scale(1.5);
