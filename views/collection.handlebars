@@ -28,11 +28,10 @@
                 </fieldset>
             </div>
             <div class="row">
-                <div class="uk-column-1-6">
+                <div class="uk-column-1-4">
                     {{#each pokemon}}
-                    <button class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
-                        <img src="{{this.card_img}}"></img>
-                    </button>
+                    <input type="image" data-favorite={{favorite}} class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
+                        
                     {{/each}}
                 </div>
             </div>
@@ -43,4 +42,4 @@
     <a href="/add-card" class="uk-button uk-button-primary uk-button-large uk-align-left">Add New Card</a>
     <a href="/update" class="uk-button uk-button-primary uk-button-large uk-align-right">Delete a Card</a>
 </div>
-{{!-- <script type="text/javascript" src="../assets/js/collection.js"></script> --}}
+ <script type="text/javascript" src="../assets/js/collection.js"></script> 

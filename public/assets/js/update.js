@@ -24,3 +24,4 @@ function deletedCard() {
 function hideCard() {
   window.location.replace("/update");
 }
+
