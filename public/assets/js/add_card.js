@@ -33,7 +33,6 @@ $(document).ready(function () {
       card_img: pokemonImg,
     }).then(function (data) {
       console.log(data);
-      /* window.location.replace("/add-card"); */
     });
   }
 

@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
-// const { default: Axios } = require("axios");
 
 router.post("/", (req, res) => {
   const cardPayload = {
@@ -34,14 +33,12 @@ router.post("/", (req, res) => {
     });
 });
 
-// /api/cards/:id
 router.put("/:id", (req, res) => {
   res.json({
     message: "Put route",
   });
 });
 
-// /api/cards/:id
 router.delete("/:id", (req, res) => {
   res.json({
     message: "Delete route",

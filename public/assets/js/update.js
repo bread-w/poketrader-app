@@ -1,6 +1,7 @@
 $(document).on("click", "button.delete", deleteCard);
 
 function deleteCard(event) {
+  event.preventDefault();
   event.stopPropagation();
   console.log("I've been clicked");
   var id = $(this).data("id");
@@ -10,16 +11,16 @@ function deleteCard(event) {
     url: "/api/usercards/" + id,
   }).then(function (response) {
     console.log(response);
-    window.location.replace("/update");
     deletedCard();
   });
 }
 
 function deletedCard() {
+  console.log("Called deleted card function")
   $("#alert").attr("style", "display: inline-block");
   setTimeout(hideCard, 1500);
 }
 
 function hideCard() {
-  $("#alert").attr("style", "display: none");
+  window.location.replace("/update");
 }
