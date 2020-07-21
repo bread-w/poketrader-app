@@ -25,7 +25,14 @@
                     </form>
                 </fieldset>
             </div>
-            <div class="uk-column-1-6@s cardCollection">
+            <div class="row">
+            <div class="uk-column-1-6">
+                {{#each pokemon}}
+                <button class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
+                    <img src="{{this.card_img}}"></img>
+                </button>
+                {{/each}}
+            </div>
             </div>
         </div>
     </div>
