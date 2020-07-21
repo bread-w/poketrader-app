@@ -1,38 +1,37 @@
-<div class="row"></div>
-<div class="container">
-    <div class="row">
-
-        <h1>{{userInfo.firstName}}'s Collection</h1>
-
-    </div>
-    <div class="uk-container">
-        <div class="row">
-            <form class="uk-form">
-                <fieldset data-uk-margin class="searchFields">
-                    <div class="search-filter uk-align-right">
-                        <div class="uk-inline">
-                            <button class="uk-button uk-button-primary" type="button" id="addCardFilter">Filter by
-                                type:</button>
-                            <div uk-dropdown="pos: bottom-justify">
-                                <ul class="uk-nav uk-dropdown-nav">
-                                    <li class="uk-nav-header">Rarity</li>
-                                    <li><a href="#">Common</a></li>
-                                    <li><a href="#">Uncommon</a></li>
-                                    <li><a href="#">Rare</a></li>
-                                    <li><a href="#">Special</a></li>
-                                </ul>
+<div class="uk-container" id="collectionPage">
+    <div class="my-container uk-margin-large-top ">
+        <div class="container-inner-border add_card">
+            <div class="row">
+                <h1>{{userInfo.firstName}}'s Collection</h1>
+            </div>
+            <div class="row">
+                <fieldset class="searchFields">
+                    <form class="uk-form">
+                        <div class="search-filter uk-align-right">
+                            <div class="uk-inline">
+                                <button class="uk-button uk-button-primary" type="button" id="addCardFilter">Filter by
+                                    type:</button>
+                                <div uk-dropdown="pos: bottom-justify">
+                                    <ul class="uk-nav uk-dropdown-nav">
+                                        <li class="uk-nav-header">Rarity</li>
+                                        <li><a href="#">Common</a></li>
+                                        <li><a href="#">Uncommon</a></li>
+                                        <li><a href="#">Rare</a></li>
+                                        <li><a href="#">Special</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </fieldset>
-            </form>
+            </div>
+            <div class="uk-column-1-6@s cardCollection">
+            </div>
         </div>
     </div>
-    <div class="uk-container">
-        <div class="uk-column-1-6@s cardCollection">
-        </div>
-    </div>
-    <br>
-    <a href="/add-card" class="uk-button uk-button-primary uk-button-large">Add New Card</a>
-    <a href="/update" class="uk-button uk-button-primary uk-button-large">Update my Collection</a>
-    <script type="text/javascript" src="../assets/js/collection.js"></script>
+</div>
+<div class="uk-container uk-align-center">
+    <a href="/add-card" class="uk-button uk-button-primary uk-button-large uk-align-left">Add New Card</a>
+    <a href="/update" class="uk-button uk-button-primary uk-button-large uk-align-right">Update my Collection</a>
+</div>
+<script type="text/javascript" src="../assets/js/collection.js"></script>
