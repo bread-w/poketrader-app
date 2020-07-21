@@ -66,6 +66,13 @@ h3 {
   min-height: 400px;
 }
 
+#alert {
+  display: none;
+  background-image: url("../img/starburst.jpg");
+  border: 5px solid yellow;
+  color: yellow;
+}
+
 .searchFields {
   height: 100%;
   padding-top: 20px;
