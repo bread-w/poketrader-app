@@ -61,17 +61,29 @@ router.get("/collection/", (req, res) => {
   });
 });
 
-router.get("/collection/", (req, res) => {
-  console.log(req.user);
-  res.render("collection", { userInfo: req.user });
-});
+// router.get("/collection/", (req, res) => {
+//   console.log(req.user);
+//   res.render("collection", { userInfo: req.user });
+// });
 
 router.get("/sign-up", (req, res) => {
   res.render("sign_up");
 });
 
-router.get("/update", (req, res) => {
-  res.render("update");
+// router.get("/update", (req, res) => {
+//   res.render("update");
+// });
+
+router.get("/update/", (req, res) => {
+  console.log(req.user);
+  db.UserCard.findAll({
+    where: {
+      user_id: req.user.id,
+    },
+  }).then((cards) => {
+    console.log(cards);
+    res.render("update", { userInfo: req.user, pokemon: cards });
+  });
 });
 
 // router.get("/api/usercards", function (req, res) {
