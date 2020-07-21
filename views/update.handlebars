@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="uk-column-1-6">
                     {{#each pokemon}}
-                    <button class="pokemonCards delete" id="{{this.id}}" src="{{this.card_img}}">
+                    <button class="pokemonCards delete" data-id="{{this.id}}" src="{{this.card_img}}">
                         <img src="{{this.card_img}}"></img>
                     </button>
                     {{/each}}

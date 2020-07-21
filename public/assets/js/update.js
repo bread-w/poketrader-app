@@ -4,6 +4,7 @@ function deleteCard(event) {
   event.stopPropagation();
   console.log("I've been clicked");
   var id = $(this).data("id");
+  console.log(id);
   $.ajax({
     method: "DELETE",
     url: "/api/usercards/" + id,
