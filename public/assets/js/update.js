@@ -16,6 +16,16 @@ function deleteCard(event) {
   });
 }
 
+$(".showFavorites").on("click", function (event) {
+  event.preventDefault();
+  $(".false").attr("style", "display: none");
+});
+
+$(".showAll").on("click", function (event) {
+  event.preventDefault();
+  $(".false").attr("style", "display: inline-block");
+});
+
 function deletedCard() {
   console.log("Called deleted card function")
   $("#alert").attr("style", "display: inline-block");
