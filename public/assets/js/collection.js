@@ -22,6 +22,16 @@ $(document).ready(function () {
   }
 });
 
+$(".showFavorites").on("click", function (event) {
+  event.preventDefault();
+  $(".false").attr("style", "display: none");
+});
+
+$(".showAll").on("click", function (event) {
+  event.preventDefault();
+  $(".false").attr("style", "display: inline-block");
+});
+
 function addedFavorite() {
   $("#alert").attr("style", "display: inline-block");
   setTimeout(hideCard, 1500);
