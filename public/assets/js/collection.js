@@ -4,10 +4,11 @@ $(document).ready(function () {
 
   function updateCard(event) {
     event.preventDefault();
-    const id = $(this).data("id");
-    const newFavorite = $(this).data(1);
-    var newFavoriteCard = {
-      favorite: newFavorite,
+    const id = $(this).attr("id");
+    console.log(id);
+    const newFavoriteCard = {
+      id: id,
+      favorite: 1,
     };
     $.ajax({
       type: "PUT",
@@ -19,3 +20,4 @@ $(document).ready(function () {
     });
   }
 });
+

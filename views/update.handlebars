@@ -32,11 +32,10 @@
                 </fieldset>
             </div>
             <div class="row">
-                <div class="uk-column-1-6">
-                    {{#each pokemon}}
-                    <button class="pokemonCards delete" data-id="{{this.id}}" src="{{this.card_img}}">
-                        <img src="{{this.card_img}}"></img>
-                    </button>
+                <div class="uk-column-1-4">
+                      {{#each pokemon}}
+                    <input type="image" data-favorite={{favorite}} class="pokemonCards" id="{{this.id}}" src="{{this.card_img}}">
+                        
                     {{/each}}
                 </div>
             </div>

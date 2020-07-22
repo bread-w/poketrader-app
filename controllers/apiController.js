@@ -17,22 +17,30 @@ router.delete("/api/usercards/:id", function (req, res) {
     res.json(response);
   });
 });
+
 router.put("/api/userscards/:id", function (req, res) {
-  db.UserCard.update({
-    where: {
-      id: req.params.id,
+  db.UserCard.update(
+    {
+      favorite: 1,
     },
-  }).then(function (response) {
-    res.json({
-      data: response,
+    {
+      where: {
+        id: req.body.id,
+      },
+    }
+  )
+    .then(function (response) {
+      res.json({
+        data: response,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "error",
+      });
     });
-  }) .catch((err) => {
-    console.log(err);
-    res.status(500).json({
-      error: true,
-      data: null,
-      message: "error",
-    });
-  });
 });
 module.exports = router;
