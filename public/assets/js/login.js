@@ -25,11 +25,20 @@ $(document).ready(function () {
     })
       .then(function (response) {
         console.log(response);
-         window.location.replace("/collection"); 
+        window.location.replace("/collection");
       })
       .catch(function (err) {
         console.log(err);
-        alert("Oops! There's been an error signing in. Please try again.");
+        failedLogin();
       });
   }
 });
+
+function failedLogin() {
+  $("#alert").attr("style", "display: inline-block");
+  setTimeout(hideCard, 3000);
+}
+
+function hideCard() {
+  window.location.replace("/");
+}
