@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const mainUrl = "https://api.pokemontcg.io/v1/cards?name=";
   var searchEl = document.getElementsByClassName("search-pokemon")[0].value;
-  var pokeInput = $("button.pokemonCards");
+  var pokeInput = $("input.pokemonCards");
 
   //listener to movie button
   $("#search-pokemon-btn").on("click", function (event) {

@@ -18,4 +18,29 @@ router.delete("/api/usercards/:id", function (req, res) {
   });
 });
 
+router.put("/api/userscards/:id", function (req, res) {
+  db.UserCard.update(
+    {
+      favorite: 1,
+    },
+    {
+      where: {
+        id: req.body.id,
+      },
+    }
+  )
+    .then(function (response) {
+      res.json({
+        data: response,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "error",
+      });
+    });
+});
 module.exports = router;

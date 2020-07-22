@@ -13,11 +13,14 @@ html {
 }
 .pokemonCards {
   margin-top: 5px;
-  background-color: rgba(255, 255, 255, 0);
+  background: transparent;
   transition: transform 0.2s;
+  outline: none;
+  max-height: 330px;
+  width: auto;
 }
 .pokemonCards:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 h1 {
@@ -86,6 +89,7 @@ p {
 
 .my-container {
   background-image: url("../img/starburst.jpg");
+  box-shadow: 25px 25px 50px 0 white inset, -25px -25px 25px 0 white inset; 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

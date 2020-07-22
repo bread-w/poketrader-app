@@ -21,12 +21,12 @@
                     </form>
                 </fieldset>
             </div>
-            <div class="row">
-                <div class="uk-column-1-6">
+            <div class="row"></div>
+                <div class="uk-column-1-4">
                     {{#each pokemon}}
-                    <button class="pokemonCards {{rarity}}" id="{{id}}" src="{{imageUrl}}">
-                        <img src="{{imageUrl}}"></img>
-                    </button>
+                    <input type="image" class="pokemonCards {{rarity}}" id="{{id}}" src="{{imageUrl}}"/>
+                        {{!-- <img class="pokemonCards" src="{{imageUrl}}"></img> --}}
+                    
                     {{/each}}
                 </div>
             </div>

@@ -1,10 +1,11 @@
-$(document).on("click", "button.delete", deleteCard);
+
+$(document).on("click", "input.pokemonCards", deleteCard);
 
 function deleteCard(event) {
   event.preventDefault();
   event.stopPropagation();
   console.log("I've been clicked");
-  var id = $(this).data("id");
+  var id = $(this).attr("id");
   console.log(id);
   $.ajax({
     method: "DELETE",
@@ -24,3 +25,4 @@ function deletedCard() {
 function hideCard() {
   window.location.replace("/update");
 }
+
