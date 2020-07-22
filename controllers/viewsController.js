@@ -62,6 +62,7 @@ router.get("/collection/", (req, res) => {
   });
 });
 
+
 router.get("/sign-up", (req, res) => {
   res.render("sign_up");
 });
