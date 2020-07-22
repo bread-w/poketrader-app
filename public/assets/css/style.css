@@ -46,6 +46,7 @@ p {
 
 .alertText {
   color: yellow;
+  text-align: center;
 }
 
 .uk-link {

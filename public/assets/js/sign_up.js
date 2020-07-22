@@ -12,19 +12,22 @@ $(document).ready(function () {
       lastName: lastInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
-     
     };
 
     if (!userData.email || !userData.password) {
       return;
     }
 
-    signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
+    signUpUser(
+      userData.email,
+      userData.password,
+      userData.firstName,
+      userData.lastName
+    );
     firstInput.val("");
     lastInput.val("");
     emailInput.val("");
     passwordInput.val("");
-    
   });
 
   function signUpUser(email, password, firstName, lastName) {
@@ -35,12 +38,21 @@ $(document).ready(function () {
       lastName: lastName,
     })
       .then(function (data) {
-        console.log(data)
+        console.log(data);
         window.location.replace("/");
       })
       .catch(function (err) {
         console.log(err);
-        alert("Oops! There's been an error signing you up. Please try again.");
+        failedSignUp();
       });
   }
 });
+
+function failedSignUp() {
+  $("#alert").attr("style", "display: inline-block");
+  setTimeout(hideCard, 3000);
+}
+
+function hideCard() {
+  window.location.replace("/sign-up");
+}
