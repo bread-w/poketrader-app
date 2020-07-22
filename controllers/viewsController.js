@@ -56,9 +56,6 @@ router.get("/collection/", (req, res) => {
     where: {
       user_id: req.user.id,
     },
-    order: [
-      ['favorite', 'ASC']
-    ],
   }).then((cards) => {
     console.log(cards);
     res.render("collection", { userInfo: req.user, pokemon: cards });
