@@ -16,8 +16,17 @@ $(document).ready(function () {
       url: "/api/userscards/" + id,
     }).then(function (response) {
       console.log(response);
+      addedFavorite();
       // Reload the page to get the updated list
     });
   }
 });
 
+function addedFavorite() {
+  $("#alert").attr("style", "display: inline-block");
+  setTimeout(hideCard, 1500);
+}
+
+function hideCard() {
+  window.location.replace("/collection");
+}
