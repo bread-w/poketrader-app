@@ -21,8 +21,8 @@ This code can be forked and cloned onto one's local device through GitHub. Pleas
 
 ## Usage
 
-![loginPage](./assets/img/PT1.png)
-![collectionPage](./assets/img/PT2.png)
+![loginPage](./public/assets/img/PT1.png)
+![collectionPage](./public/assets/img/PT2.png)
 
 ## Links
 [GitHub repository](https://github.com/bread-w/poketrader-app "Repository")
