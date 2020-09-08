@@ -21,7 +21,8 @@ This code can be forked and cloned onto one's local device through GitHub. Pleas
 
 ## Usage
 
-The primary usage of this code is to build a digital collection of Pokemon cards.
+![loginPage](./assets/img/PT1.png)
+![collectionPage](./assets/img/PT2.png)
 
 ## Links
 [GitHub repository](https://github.com/bread-w/poketrader-app "Repository")
