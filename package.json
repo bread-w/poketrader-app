@@ -21,7 +21,7 @@
   "homepage": "https://github.com/bread-w/poketrader-app#readme",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "2.4.3",
     "express": "^4.17.1",
     "express-handlebars": "^3.0.0",
