@@ -23,7 +23,7 @@
     "@handlebars/allow-prototype-access": "^1.0.3",
     "axios": "^0.19.2",
     "bcryptjs": "2.4.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.16.1",
     "handlebars": "^4.7.6",
